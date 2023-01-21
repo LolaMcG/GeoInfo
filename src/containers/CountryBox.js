@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import CountryDropdown from "../components/CountryDropdown";
 import CountryList from "../components/CountryList";
 import Header from "../components/Header";
+import CountryDetail from "../components/CountryDetail";
+
 
 const CountryBox = () => {
 
@@ -18,11 +20,21 @@ const CountryBox = () => {
         .then (countries => setCountries(countries))
     }
 
+    const onCountrySelected = function (country) {
+        setChosenCountry(country)
+    }
+
     return (
         <div>
-            <Header header="GeoInfo"/>
+            <Header
+            header="GeoInfo"/>
             {/* <CountryList countries={countries}/> */}
-            <CountryDropdown countries={countries}/>
+            <CountryDropdown
+            countries={countries}
+            onCountrySelected={onCountrySelected}
+            />
+
+            {chosenCountry ? <CountryDetail country={chosenCountry}/> : null}
         </div>
     )
 }

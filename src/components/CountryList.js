@@ -6,7 +6,7 @@ const CountryList = ({countries}) => {
     const listOfMappedCountries = countries.map((country) => {
         return (
             <Country
-            countryName={country.name.common}
+            // countryName={country.name.common}
             capital={country.capital} 
             continent={country.region}
             population={country.population}
