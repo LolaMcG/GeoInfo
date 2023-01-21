@@ -20,7 +20,7 @@ const CountryBox = () => {
         <div>
             <Header header="GeoInfo"/>
             <p>Helloooo!</p>
-            <CountryList/>
+            <CountryList countries={countries}/>
         </div>
     )
 }

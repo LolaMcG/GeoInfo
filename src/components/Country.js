@@ -1,8 +1,8 @@
 import React from "react";
 
-const Country = () => {
+const Country = ({countryName}) => {
     return (
-        <p>This is a Country component</p>
+        <p>The name of the country you've chosen is {countryName}</p>
     )
 }
 
