@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from "react";
+import CountryDropdown from "../components/CountryDropdown";
 import CountryList from "../components/CountryList";
 import Header from "../components/Header";
 
 const CountryBox = () => {
 
     const [countries, setCountries] = useState([])
+    const [chosenCountry, setChosenCountry] = useState(null)
 
     useEffect(() => {
         getCountries()
@@ -19,7 +21,8 @@ const CountryBox = () => {
     return (
         <div>
             <Header header="GeoInfo"/>
-            <CountryList countries={countries}/>
+            {/* <CountryList countries={countries}/> */}
+            <CountryDropdown countries={countries}/>
         </div>
     )
 }
