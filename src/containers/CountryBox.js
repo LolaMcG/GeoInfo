@@ -19,7 +19,6 @@ const CountryBox = () => {
     return (
         <div>
             <Header header="GeoInfo"/>
-            <p>Helloooo!</p>
             <CountryList countries={countries}/>
         </div>
     )
