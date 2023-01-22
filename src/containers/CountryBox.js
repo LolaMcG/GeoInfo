@@ -24,17 +24,15 @@ const CountryBox = () => {
         .then (countries => setCountries(countries))
         }
 
-    
-        function clearRadioButtons(){
-            var ele = document.querySelectorAll("input[type=radio]");
-                for(var i=0;i<ele.length;i++){
-                ele[i].checked = false;
+    const resetRadioButtons = function() {
+        let button = document.querySelectorAll("input[type=radio]")
+            for (let i=0; i < button.length; i++){
+                button[i].checked = false
             }
-        }
-
+    }
 
     const onCountrySelected = function (country) {
-        clearRadioButtons()
+        resetRadioButtons()
         setChosenCountry(country)
     }
 

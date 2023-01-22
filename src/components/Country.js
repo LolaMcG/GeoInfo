@@ -25,12 +25,19 @@ const Country = ({countryName, capital, continent, population, flag, amerCont, d
 
                 <p>{!capital ? countryName + " has no official capital" : "The capital of " + countryName + " is "}<span>{capital}</span></p>
 
-                <p>{continent === "Antarctic" ? countryName + " is on the continent of The Antarctic" : 
-                continent === "Americas" ? countryName + " is on the continent of " + amerCont :
-                countryName + " is on the continent of " + continent}</p>
+                <p>{continent === "Antarctic" ? (
+                    <p> {countryName} " is on the continent of <span>The Antarctic</span>
+                    </p>
+                ) : continent === "Americas" ? (
+                    <p>{countryName} is on the continent of <span>{amerCont}</span></p>
+                ) : (
+                    <p>
+                {countryName} is on the continent of <span>{continent}</span></p>
+                )}
+                </p>
 
-                <p>{population === 0 ? "No one permanently lives here!"
-                : "It has a population of " + population}</p>
+                <p>{population === 0 ? "No one permanently lives here!" : "It has a population of "}
+                {population > 0 ? <span>{population}</span> : null}</p>
 
                 <p>Can you guess what side of the road they drive on in {countryName}?</p>
                     <input type="radio" id="left" name="drive_side" value="left" onChange={handleChange}/>
