@@ -1,0 +1,47 @@
+body, html{
+    min-height: 100%;
+    background-image: url('https://wallpaperaccess.com/full/3179404.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#header{
+    text-align: center;
+    color:  rgb(33, 196, 245);;
+    font-family: 'Abril Fatface';
+    font-size: 50px;
+    text-decoration: underline;
+}
+#app{
+    display: flex;
+    justify-content: center;
+}
+
+#country-box {
+    align-items: center;
+}
+
+#country {
+    margin: 30px;
+    background-color: rgb(33, 196, 245);
+    position: relative;
+    border-radius: 10px;
+}
+
+#flag{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 168px;
+    width: 320px;
+}
+
+#country-text{
+    padding-top: 170px;
+}
+
+span{
+    font-weight: bold;
+}

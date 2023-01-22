@@ -3,7 +3,9 @@ import CountryBox from './containers/CountryBox';
 
 function App() {
   return (
+    <div id='app'>
     <CountryBox/>
+    </div>
   );
 }
 

@@ -1,16 +1,20 @@
 import React from "react";
 import Country from "./Country";
 
-const CountryDetail = ({country}) => {
+const CountryDetail = ({country, onSideSelected, result}) => {
     return (
-            <div>
+            <div id="country">
                 <Country
-                name={country.name.common}
+                countryName={country.name.common}
                 capital={country.capital}
                 continent={country.region}
+                amerCont={country.subregion}
                 population={country.population}
                 flag={country.flags.png}
                 key={country.index}
+                drive={country.car.side}
+                onSideSelected={onSideSelected}
+                result={result}
                 />
             </div>
         )
